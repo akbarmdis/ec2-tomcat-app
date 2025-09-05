@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Custom Tomcat users configuration
+  This file defines users and roles for Tomcat authentication
+  
+  IMPORTANT: Change the default passwords in production!
+-->
+<tomcat-users xmlns="http://tomcat.apache.org/xml"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+              version="1.0">
+
+  <!-- Define roles -->
+  <role rolename="manager-gui"/>
+  <role rolename="manager-script"/>
+  <role rolename="manager-jmx"/>
+  <role rolename="manager-status"/>
+  <role rolename="admin-gui"/>
+  <role rolename="admin-script"/>
+
+  <!-- 
+    NOTE: By default, no user is included in the "manager-gui" role required
+    to operate the "/manager/html" web application. If you wish to use this app,
+    you must define such a user - the username and password are up to you.
+    
+    WARNING: The default passwords below should be changed in production!
+  -->
+  
+  <!-- Manager user with GUI and script access -->
+  <user username="admin" 
+        password="admin123!" 
+        roles="manager-gui,manager-script,manager-jmx,manager-status,admin-gui,admin-script"/>
+
+  <!-- Script-only user for automated deployments -->
+  <user username="deployer" 
+        password="deploy123!" 
+        roles="manager-script"/>
+
+  <!-- Read-only user for monitoring -->
+  <user username="monitor" 
+        password="monitor123!" 
+        roles="manager-status"/>
+
+  <!--
+    Example of additional user configurations:
+    
+    <user username="tomcat" password="<must-be-changed>" roles="tomcat"/>
+    <user username="both" password="<must-be-changed>" roles="tomcat,role1"/>
+    <user username="role1" password="<must-be-changed>" roles="role1"/>
+  -->
+
+</tomcat-users>

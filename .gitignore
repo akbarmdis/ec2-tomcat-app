@@ -1,0 +1,46 @@
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+terraform.tfvars
+*.auto.tfvars
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+build/
+.gradle/
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# SSH Keys
+*.pem
+*.key
+
+# Environment variables
+.env
+.env.local
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# Backup files
+*~
+*.bak

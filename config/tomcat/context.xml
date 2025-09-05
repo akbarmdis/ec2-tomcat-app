@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Custom Tomcat context.xml configuration
+  This file defines the default configuration for all web applications
+-->
+<Context>
+
+    <!-- Default set of monitored resources. If one of these changes, the    -->
+    <!-- web application will be reloaded.                                   -->
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <WatchedResource>WEB-INF/tomcat-web.xml</WatchedResource>
+    <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
+
+    <!-- Uncomment this to disable session persistence across Tomcat restarts -->
+    <!--
+    <Manager pathname="" />
+    -->
+    
+    <!-- Security configuration -->
+    <!-- Prevent access to WEB-INF and META-INF directories -->
+    <Valve className="org.apache.catalina.valves.rewrite.RewriteValve" />
+
+    <!-- Enable the container SCI scanning -->
+    <JarScanner>
+        <JarScanFilter defaultPluggabilityScan="false" />
+    </JarScanner>
+
+    <!-- Configure session timeout (30 minutes) -->
+    <Manager className="org.apache.catalina.session.StandardManager">
+        <Store className="org.apache.catalina.session.FileStore" />
+    </Manager>
+
+    <!-- Resource configuration for connection pooling (example) -->
+    <!--
+    <Resource name="jdbc/myDataSource" 
+              auth="Container"
+              type="javax.sql.DataSource"
+              maxTotal="20" 
+              maxIdle="10"
+              maxWaitMillis="10000"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/mydb"
+              username="dbuser" 
+              password="dbpassword" />
+    -->
+
+    <!-- Environment entries -->
+    <Environment name="app/version" value="1.0.0" type="java.lang.String" override="false"/>
+    <Environment name="app/environment" value="production" type="java.lang.String" override="false"/>
+
+</Context>
