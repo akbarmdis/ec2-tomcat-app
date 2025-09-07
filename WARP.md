@@ -1,7 +1,3 @@
-# WARP.md
-
-This file provides guidance to WARP (warp.dev) when working with code in this repository.
-
 ## Project Overview
 
 This is a complete Apache Tomcat web application deployment solution for AWS EC2, featuring Infrastructure as Code with Terraform, automated deployment scripts, and a sample Java servlet-based web application. The project demonstrates a full production-ready deployment pipeline from source code to AWS infrastructure.
