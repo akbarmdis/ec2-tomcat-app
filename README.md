@@ -478,15 +478,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-If you encounter issues or have questions:
-
-1. Check the [Troubleshooting](#troubleshooting) section
-2. Search existing [GitHub Issues](../../issues)
-3. Create a new issue with detailed information
-4. Join our community discussions
-
----
-
-**🎉 Happy Deploying!**
-
-Built with ❤️ for the developer community. Star ⭐ this repo if it helps you!
+-- Support will be available in the future Insha Allah --
